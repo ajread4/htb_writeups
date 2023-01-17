@@ -1,5 +1,8 @@
 # Optimum 
 
+Machine Level: Easy 
+OS: Windows 
+
 ## Scanning 
 An aggressive NMAP scan revealed the HTTP server on port 80. 
 ```
