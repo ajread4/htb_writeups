@@ -298,4 +298,4 @@ Mode              Size  Type  Last modified              Name
 ```
 
 ## Assistance 
-I used the writeup (here)[http://dann.com.br/hack-the-box-optimum-windows/] and (here)[https://esseum.com/hack-the-box-optimum-writeup/] for help with inital access and privilege escalation. It was interesting to try initial access without the use of Metasploit. It made things slightly more complicated. Thanks for the help! 
+I used the writeup [here](http://dann.com.br/hack-the-box-optimum-windows/) and [here](https://esseum.com/hack-the-box-optimum-writeup/) for help with inital access and privilege escalation. It was interesting to try initial access without the use of Metasploit. It made things slightly more complicated. Thanks for the help! 
