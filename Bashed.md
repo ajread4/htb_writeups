@@ -1,6 +1,6 @@
 # Bashed 
 
-Machine Level: Easy 
+Machine Level: Easy <br />
 OS: Linux 
 
 ## Scanning 
