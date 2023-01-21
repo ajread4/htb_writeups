@@ -6,9 +6,9 @@ OS: Windows
 ## Scanning
 I ran an aggressive NMAP scan and found that it was a Windows XP box. 
 ```
-ajread@aj-ubuntu:~$ nmap -A 10.10.10.4
+ajread@aj-ubuntu:~$ nmap -A [TARGET IP]
 Starting Nmap 7.80 ( https://nmap.org ) at 2023-01-21 13:38 EST
-Nmap scan report for 10.10.10.4
+Nmap scan report for [TARGET IP]
 Host is up (0.015s latency).
 Not shown: 997 closed ports
 PORT    STATE SERVICE      VERSION
