@@ -1,7 +1,7 @@
 # Legacy
 
 Machine Level: Easy <br />
-OS: 
+OS: Windows
 
 ## Scanning
 I ran an aggressive NMAP script to determine the services and OS on the box. 
