@@ -6,9 +6,9 @@ OS: Linux/CentOS
 ## Scanning 
 I started an aggressive NMAP scan to see what ports and services are open. 
 ```
-ajread@aj-ubuntu:~/hackthebox$ nmap -A 10.10.10.7 
+ajread@aj-ubuntu:~/hackthebox$ nmap -A [TARGET IP]
 Starting Nmap 7.80 ( https://nmap.org ) at 2023-02-17 13:27 EST
-Nmap scan report for 10.10.10.7
+Nmap scan report for [TARGET IP]
 Host is up (0.013s latency).
 Not shown: 988 closed ports
 PORT      STATE SERVICE    VERSION
@@ -20,7 +20,7 @@ PORT      STATE SERVICE    VERSION
 |_smtp-commands: beep.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
 80/tcp    open  http       Apache httpd 2.2.3
 |_http-server-header: Apache/2.2.3 (CentOS)
-|_http-title: Did not follow redirect to https://10.10.10.7/
+|_http-title: Did not follow redirect to https://[TARGET IP]/
 |_https-redirect: ERROR: Script execution failed (use -d to debug)
 110/tcp   open  pop3       Cyrus pop3d 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4
 |_pop3-capabilities: UIDL PIPELINING STLS TOP AUTH-RESP-CODE RESP-CODES IMPLEMENTATION(Cyrus POP3 server v2) USER EXPIRE(NEVER) LOGIN-DELAY(0) APOP
@@ -65,13 +65,13 @@ Nmap done: 1 IP address (1 host up) scanned in 355.77 seconds
 ## Enumeration 
 I wanted to take a closer look at the HTTP service running on port 80 and 443. I ran gobuster against the service running on port 443 with a directory list from SecLists.
 ```
-ajread@aj-ubuntu:~/hackthebox$ gobuster -u https://10.10.10.7 -w ~/resources/wordlists/SecLists/Discovery/Web-Content/raft-medium-directories.txt -k
+ajread@aj-ubuntu:~/hackthebox$ gobuster -u https://[TARGET IP] -w ~/resources/wordlists/SecLists/Discovery/Web-Content/raft-medium-directories.txt -k
 
 =====================================================
 Gobuster v2.0.1              OJ Reeves (@TheColonial)
 =====================================================
 [+] Mode         : dir
-[+] Url/Domain   : https://10.10.10.7/
+[+] Url/Domain   : https://[TARGET IP]/
 [+] Threads      : 10
 [+] Wordlist     : /home/ajread/resources/wordlists/SecLists/Discovery/Web-Content/raft-medium-directories.txt
 [+] Status codes : 200,204,301,302,307,403
@@ -93,7 +93,7 @@ Gobuster v2.0.1              OJ Reeves (@TheColonial)
 /configs (Status: 301)
 /recordings (Status: 301)
 /vtigercrm (Status: 301)
-2023/02/17 13:55:08 [!] parse "https://10.10.10.7/error\x1f_log": net/url: invalid control character in URL
+2023/02/17 13:55:08 [!] parse "https://[TARGET IP]/error\x1f_log": net/url: invalid control character in URL
 =====================================================
 2023/02/17 13:55:55 Finished
 =====================================================
